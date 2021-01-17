@@ -1,0 +1,2 @@
+arm-none-eabi-as -mthumb -mcpu=cortex-m3 code.S -o code.o
+arm-none-eabi-gcc code.o -mcpu=cortex-m3 -mthumb -Wall --specs=nosys.specs -nostdlib -lgcc -T./linkerScript.ld -o main.elf
